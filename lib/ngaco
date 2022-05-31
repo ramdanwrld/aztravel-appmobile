@@ -1,0 +1,484 @@
+        import 'package:flutter/material.dart';
+        import 'dart:math' as math;
+        
+        class BerandaWidget extends StatefulWidget {
+        @override
+        _BerandaWidgetState createState() => _BerandaWidgetState();
+        }
+        
+        class _BerandaWidgetState extends State<BerandaWidget> {
+        @override
+        Widget build(BuildContext context) {
+        // Figma Flutter Generator BerandaWidget - FRAME
+        
+        return Container(
+      width: 360,
+      height: 800,
+      decoration: BoxDecoration(
+          color : Color.fromRGBO(100, 39, 228, 1),
+  ),
+      child: Stack(
+        children: <Widget>[
+          Positioned(
+        top: 0,
+        left: 0,
+        child: Container(
+      width: 360,
+      height: 800,
+      
+      child: Stack(
+        children: <Widget>[
+          Positioned(
+        top: 0,
+        left: 0,
+        child: Container(
+      width: 360,
+      height: 800,
+      decoration: BoxDecoration(
+          color : Color.fromRGBO(100, 39, 228, 1),
+  ),
+      child: Stack(
+        children: <Widget>[
+          Positioned(
+        top: 0,
+        left: 0,
+        child: Container(
+        width: 360,
+        height: 800,
+        decoration: BoxDecoration(
+          color : Color.fromRGBO(100, 39, 228, 1),
+  )
+      )
+      ),Positioned(
+        top: 223,
+        left: 38,
+        child: Container(
+      width: 295,
+      height: 349,
+      
+      child: Stack(
+        children: <Widget>[
+          Positioned(
+        top: 0,
+        left: 0,
+        child: Container(
+        width: 295,
+        height: 130,
+        decoration: BoxDecoration(
+          borderRadius : BorderRadius.only(
+            topLeft: Radius.circular(10),
+            topRight: Radius.circular(10),
+            bottomLeft: Radius.circular(10),
+            bottomRight: Radius.circular(10),
+          ),
+      boxShadow : [BoxShadow(
+          color: Color.fromRGBO(0, 0, 0, 0.25),
+          offset: Offset(0,4),
+          blurRadius: 4
+      )],
+      color : Color.fromRGBO(249, 249, 249, 1),
+  )
+      )
+      ),Positioned(
+        top: 101,
+        left: 37,
+        child: Text('Alam', textAlign: TextAlign.left, style: TextStyle(
+        color: Color.fromRGBO(0, 0, 0, 1),
+        fontFamily: 'Roboto',
+        fontSize: 13,
+        letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
+        fontWeight: FontWeight.normal,
+        height: 1
+      ),)
+      ),Positioned(
+        top: 334,
+        left: 5,
+        child: Text('Foto Obyek Wisata', textAlign: TextAlign.left, style: TextStyle(
+        color: Color.fromRGBO(255, 255, 255, 1),
+        fontFamily: 'Roboto',
+        fontSize: 13,
+        letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
+        fontWeight: FontWeight.normal,
+        height: 1
+      ),)
+      ),Positioned(
+        top: 101,
+        left: 126,
+        child: Text('Event', textAlign: TextAlign.left, style: TextStyle(
+        color: Color.fromRGBO(0, 0, 0, 1),
+        fontFamily: 'Roboto',
+        fontSize: 13,
+        letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
+        fontWeight: FontWeight.normal,
+        height: 1
+      ),)
+      ),Positioned(
+        top: 101,
+        left: 210,
+        child: Text('Kuliner', textAlign: TextAlign.left, style: TextStyle(
+        color: Color.fromRGBO(0, 0, 0, 1),
+        fontFamily: 'Roboto',
+        fontSize: 13,
+        letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
+        fontWeight: FontWeight.normal,
+        height: 1
+      ),)
+      ),Positioned(
+        top: 54,
+        left: 35,
+        child: Container(
+        width: 34,
+        height: 35,
+        decoration: BoxDecoration(
+          borderRadius : BorderRadius.only(
+            topLeft: Radius.circular(50),
+            topRight: Radius.circular(50),
+            bottomLeft: Radius.circular(50),
+            bottomRight: Radius.circular(50),
+          ),
+      color : Color.fromRGBO(217, 217, 217, 1),
+  )
+      )
+      ),Positioned(
+        top: 54,
+        left: 125,
+        child: Container(
+        width: 34,
+        height: 35,
+        decoration: BoxDecoration(
+          borderRadius : BorderRadius.only(
+            topLeft: Radius.circular(50),
+            topRight: Radius.circular(50),
+            bottomLeft: Radius.circular(50),
+            bottomRight: Radius.circular(50),
+          ),
+      color : Color.fromRGBO(217, 217, 217, 1),
+  )
+      )
+      ),Positioned(
+        top: 54,
+        left: 213,
+        child: Container(
+        width: 34,
+        height: 35,
+        decoration: BoxDecoration(
+          borderRadius : BorderRadius.only(
+            topLeft: Radius.circular(50),
+            topRight: Radius.circular(50),
+            bottomLeft: Radius.circular(50),
+            bottomRight: Radius.circular(50),
+          ),
+      color : Color.fromRGBO(217, 217, 217, 1),
+  )
+      )
+      ),
+        ]
+      )
+    )
+      ),Positioned(
+        top: 740,
+        left: 0,
+        child: Container(
+        width: 360,
+        height: 60,
+        decoration: BoxDecoration(
+          color : Color.fromRGBO(217, 217, 217, 1),
+  )
+      )
+      ),Positioned(
+        top: 377,
+        left: 38,
+        child: Container(
+        width: 295,
+        height: 150,
+        decoration: BoxDecoration(
+          color : Color.fromRGBO(217, 217, 217, 1),
+  )
+      )
+      ),Positioned(
+        top: 590,
+        left: 34,
+        child: Container(
+        width: 129,
+        height: 111,
+        decoration: BoxDecoration(
+          borderRadius : BorderRadius.only(
+            topLeft: Radius.circular(10),
+            topRight: Radius.circular(10),
+            bottomLeft: Radius.circular(10),
+            bottomRight: Radius.circular(10),
+          ),
+      color : Color.fromRGBO(217, 217, 217, 1),
+  )
+      )
+      ),Positioned(
+        top: 590,
+        left: 180,
+        child: Container(
+        width: 129,
+        height: 111,
+        decoration: BoxDecoration(
+          borderRadius : BorderRadius.only(
+            topLeft: Radius.circular(10),
+            topRight: Radius.circular(10),
+            bottomLeft: Radius.circular(10),
+            bottomRight: Radius.circular(10),
+          ),
+      color : Color.fromRGBO(217, 217, 217, 1),
+  )
+      )
+      ),Positioned(
+        top: 230,
+        left: 90,
+        child: Text('Pilihan Paket Wisata ', textAlign: TextAlign.left, style: TextStyle(
+        color: Color.fromRGBO(10, 10, 10, 1),
+        fontFamily: 'Roboto',
+        fontSize: 20,
+        letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
+        fontWeight: FontWeight.normal,
+        height: 1
+      ),)
+      ),Positioned(
+        top: 746,
+        left: 10,
+        child: Container(
+        width: 94,
+        height: 49,
+        decoration: BoxDecoration(
+          color : Color.fromRGBO(249, 249, 249, 1),
+  )
+      )
+      ),Positioned(
+        top: 781,
+        left: 37,
+        child: Text('Beranda', textAlign: TextAlign.center, style: TextStyle(
+        color: Color.fromRGBO(0, 0, 0, 1),
+        fontFamily: 'SF Pro Text',
+        fontSize: 10,
+        letterSpacing: 0.10000000149011612,
+        fontWeight: FontWeight.normal,
+        height: 1
+      ),)
+      ),Positioned(
+        top: 783,
+        left: 116,
+        child: Text('Kontak Travel', textAlign: TextAlign.center, style: TextStyle(
+        color: Color.fromRGBO(0, 0, 0, 1),
+        fontFamily: 'SF Pro Text',
+        fontSize: 10,
+        letterSpacing: 0.10000000149011612,
+        fontWeight: FontWeight.normal,
+        height: 1
+      ),)
+      ),Positioned(
+        top: 751,
+        left: 301,
+        child: null
+      ),Positioned(
+        top: 783,
+        left: 301,
+        child: Text('Akun', textAlign: TextAlign.center, style: TextStyle(
+        color: Color.fromRGBO(0, 0, 0, 1),
+        fontFamily: 'SF Pro Text',
+        fontSize: 10,
+        letterSpacing: 0.10000000149011612,
+        fontWeight: FontWeight.normal,
+        height: 1
+      ),)
+      ),Positioned(
+        top: 746,
+        left: 193,
+        child: Container(
+        width: 94,
+        height: 49,
+        decoration: BoxDecoration(
+          color : Color.fromRGBO(249, 249, 249, 1),
+  )
+      )
+      ),Positioned(
+        top: 783,
+        left: 205,
+        child: Text('Lihat Pesanan', textAlign: TextAlign.center, style: TextStyle(
+        color: Color.fromRGBO(0, 0, 0, 1),
+        fontFamily: 'SF Pro Text',
+        fontSize: 10,
+        letterSpacing: 0.10000000149011612,
+        fontWeight: FontWeight.normal,
+        height: 1
+      ),)
+      ),Positioned(
+        top: 751,
+        left: 46,
+        child: Container(
+        width: 24,
+        height: 24,
+        decoration: BoxDecoration(
+          image : DecorationImage(
+          image: AssetImage('assets/images/House1.png'),
+          fit: BoxFit.fitWidth
+      ),
+  )
+      )
+      ),Positioned(
+        top: 752,
+        left: 134,
+        child: Container(
+        width: 24,
+        height: 24,
+        decoration: BoxDecoration(
+          image : DecorationImage(
+          image: AssetImage('assets/images/Support1.png'),
+          fit: BoxFit.fitWidth
+      ),
+  )
+      )
+      ),Positioned(
+        top: 751,
+        left: 229,
+        child: Container(
+        width: 18.85714340209961,
+        height: 24,
+        decoration: BoxDecoration(
+          image : DecorationImage(
+          image: AssetImage('assets/images/Orderfood1.png'),
+          fit: BoxFit.fitWidth
+      ),
+  )
+      )
+      ),
+        ]
+      )
+    )
+      ),
+        ]
+      )
+    )
+      ),Positioned(
+        top: 17,
+        left: 0,
+        child: Container(
+      width: 377.0000915527344,
+      height: 174.941650390625,
+      
+      child: Stack(
+        children: <Widget>[
+          Positioned(
+        top: 28.9999942779541,
+        left: 33.000083923339844,
+        child: Container(
+      width: 344,
+      height: 113,
+      
+      child: Stack(
+        children: <Widget>[
+          Positioned(
+        top: 0,
+        left: 0,
+        child: Container(
+        width: 315,
+        height: 113,
+        decoration: BoxDecoration(
+          borderRadius : BorderRadius.only(
+            topLeft: Radius.circular(20),
+            topRight: Radius.circular(20),
+            bottomLeft: Radius.circular(20),
+            bottomRight: Radius.circular(20),
+          ),
+      color : Color.fromRGBO(255, 255, 255, 1),
+  )
+      )
+      ),Positioned(
+        top: 38,
+        left: 133,
+        child: Text('AZ TRAVEL', textAlign: TextAlign.left, style: TextStyle(
+        color: Color.fromRGBO(254, 112, 88, 1),
+        fontFamily: 'Rubik One',
+        fontSize: 27,
+        letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
+        fontWeight: FontWeight.normal,
+        height: 1
+      ),)
+      ),Positioned(
+        top: 71,
+        left: 140,
+        child: Text('Solusi Perjalan Anda', textAlign: TextAlign.left, style: TextStyle(
+        color: Color.fromRGBO(0, 0, 0, 1),
+        fontFamily: 'Rubik One',
+        fontSize: 13,
+        letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
+        fontWeight: FontWeight.normal,
+        height: 1
+      ),)
+      ),
+        ]
+      )
+    )
+      ),Positioned(
+        top: 66.99999237060547,
+        left: 166.00009155273438,
+        child: Container(
+      width: 211,
+      height: 49,
+      
+      child: Stack(
+        children: <Widget>[
+          Positioned(
+        top: 0,
+        left: 0,
+        child: Text('AZ TRAVEL', textAlign: TextAlign.left, style: TextStyle(
+        color: Color.fromRGBO(254, 112, 88, 1),
+        fontFamily: 'Rubik One',
+        fontSize: 27,
+        letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
+        fontWeight: FontWeight.normal,
+        height: 1
+      ),)
+      ),Positioned(
+        top: 33,
+        left: 7,
+        child: Text('Solusi Perjalan Anda', textAlign: TextAlign.left, style: TextStyle(
+        color: Color.fromRGBO(0, 0, 0, 1),
+        fontFamily: 'Rubik One',
+        fontSize: 13,
+        letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
+        fontWeight: FontWeight.normal,
+        height: 1
+      ),)
+      ),
+        ]
+      )
+    )
+      ),Positioned(
+        top: 174.941650390625,
+        left: 53.720298767089844,
+        child: Container(
+      width: 140.41598510742188,
+      height: 127.73311614990234,
+      
+      child: Stack(
+        children: <Widget>[
+          Positioned(
+        top: -43.68924402026278,
+        left: -20.252419616262614,
+        child: Transform.rotate(
+        angle: -0.11661540728388937 * (math.pi / 180),
+        child: SvgPicture.asset(
+        'assets/images/vector.svg',
+        semanticsLabel: 'vector'
+      );,
+      )
+      ),
+        ]
+      )
+    )
+      ),
+        ]
+      )
+    )
+      ),
+        ]
+      )
+    );
+        }
+        }
+        
