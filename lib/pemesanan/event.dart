@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/bottom/beranda.dart';
 
+import '../bottom/bottom_navi.dart';
+
 class eventpage extends StatefulWidget {
   const eventpage({Key? key}) : super(key: key);
 
@@ -18,7 +20,7 @@ class _eventpageState extends State<eventpage> {
         leading: IconButton(
           onPressed: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return beranda();
+              return BottomNavi();
             }));
           }, // Handle your on tap here.
           icon: Icon(Icons.arrow_back_ios),

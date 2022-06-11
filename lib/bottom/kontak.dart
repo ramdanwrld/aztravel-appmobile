@@ -25,9 +25,9 @@ class _kontakState extends State<kontak> {
             children: [
               Image(image: AssetImage('assets/images/aztravel2.png')),
               Text(
-                '       Ada Pertanyaan? \n Silahkan Hubungi Kami',
+                'Apabila ada yang ingin ditanyakan \n      Silahkan Hubungi Kami di',
                 style: TextStyle(
-                  fontSize: 25.0,
+                  fontSize: 20.0,
                   color: Colors.white,
                 ),
               ),

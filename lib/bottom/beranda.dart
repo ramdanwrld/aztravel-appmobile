@@ -54,10 +54,10 @@ class _berandaState extends State<beranda> {
           ),
         ),
         Container(
-          margin: const EdgeInsets.only(top: 150, left: 45.0, right: 30.0),
+          margin: const EdgeInsets.only(top: 160, left: 45.0, right: 30.0),
           alignment: Alignment.center,
           width: 300,
-          height: 100,
+          height: 70,
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(20),
@@ -130,8 +130,79 @@ class _berandaState extends State<beranda> {
           ]),
         ),
         Container(
+          margin: const EdgeInsets.only(top: 240, left: 45.0, right: 30.0),
+          alignment: Alignment.center,
+          width: 300,
+          height: 70,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child:
+              Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+            SizedBox.fromSize(
+              size: Size(56, 56),
+              child: Material(
+                child: InkWell(
+                  splashColor: Color.fromRGBO(100, 39, 228, 1),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return eventpage();
+                    }));
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(Icons.shopping_bag, size: 40), // <-- Icon
+                      Text("Pesanan"), // <-- Text
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            SizedBox.fromSize(
+              size: Size(56, 56),
+              child: Material(
+                child: InkWell(
+                  splashColor: Color.fromRGBO(100, 39, 228, 1),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return eventpage();
+                    }));
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(Icons.call, size: 40), // <-- Icon
+                      Text("Hubungi"), // <-- Text
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ]),
+        ),
+        Container(
+            margin: const EdgeInsets.only(top: 330, left: 45.0, right: 30.0),
+            child: RichText(
+              text: TextSpan(
+                style: DefaultTextStyle.of(context).style,
+                children: <TextSpan>[
+                  TextSpan(
+                    text: "           Galeri Foto Lombok \n",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                    ),
+                  ),
+                ],
+              ),
+            )),
+        Container(
           margin: const EdgeInsets.only(
-            top: 280,
+            top: 360,
           ),
           child: CarouselSlider(
               options: CarouselOptions(

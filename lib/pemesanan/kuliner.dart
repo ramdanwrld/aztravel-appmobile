@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/bottom/beranda.dart';
 
+import '../bottom/bottom_navi.dart';
+
 class kulinerpage extends StatefulWidget {
   const kulinerpage({Key? key}) : super(key: key);
 
@@ -18,7 +20,7 @@ class _kulinerpageState extends State<kulinerpage> {
         leading: IconButton(
           onPressed: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return beranda();
+              return BottomNavi();
             }));
           }, // Handle your on tap here.
           icon: Icon(Icons.arrow_back_ios),
