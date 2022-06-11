@@ -1,5 +1,7 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 
 class beranda extends StatefulWidget {
   const beranda({Key? key}) : super(key: key);
@@ -9,6 +11,20 @@ class beranda extends StatefulWidget {
 }
 
 class _berandaState extends State<beranda> {
+  final List<String> imgList = [
+    'https://nicetourbali.com/wp-content/uploads/2019/07/Gili-Trawangan-Snorkeling-Day-Trip.jpg',
+    'https://cf.bstatic.com/xdata/images/hotel/max1024x768/328280587.jpg?k=7eabf88f02b9406cba4a86bac288567ac122bcce8c3ab2dcc6580d481c5027e3&o=&hp=1',
+    'https://disk.mediaindonesia.com/thumbs/1800x1200/news/2022/01/54f732d698290a1030dec53fb8e08b83.jpg',
+    'https://cdn-cas.orami.co.id/parenting/images/shutterstock_1681180648.width-800.jpg',
+    'https://pelopor.id/wp-content/uploads/2021/12/Gendang-Beleq.jpg',
+    'https://cdn-2.tstatic.net/travel/foto/bank/images/nasi-puyung-lombok.jpg',
+    'https://travelspromo.com/wp-content/uploads/2020/04/The-mandalika-kuta-lombok.jpg',
+    'http://www.trekkingrinjani.com/images/rinjani.jpg',
+    'https://1.bp.blogspot.com/-IMCxGqe8xCY/Wvw991azHoI/AAAAAAAAAjM/Hc2RjWh0tmY4Kln-1Tm8iX0wVy6ltowjQCLcBGAs/s1600/ajprioko___5AFbAFi4av___%255B1%255D.jpg',
+    'https://cdn.statically.io/img/liburmulu.com/f=auto%2Cq=60/wp-content/uploads/2016/01/Ini-Indonesia-teman-Kalian-harus-bisa-menjaganya-dengan-baik-bukan-merusaknya-Setuju.jpg',
+    'https://assets.promediateknologi.com/crop/0x0:0x0/x/photo/2022/03/01/2785067363.jpg',
+    'https://www.indonesiatravel.news/wp-content/uploads/2021/09/IMG-20210918-WA0042.jpg',
+  ];
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 44, 4, 131),
@@ -96,24 +112,60 @@ class _berandaState extends State<beranda> {
           ]),
         ),
         Container(
-          margin: const EdgeInsets.only(top: 450, left: 45.0, right: 30.0),
-          alignment: Alignment.center,
-          width: 300,
-          height: 100,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(20),
+          margin: const EdgeInsets.only(
+            top: 280,
           ),
-        ),
-        Container(
-          margin: const EdgeInsets.only(top: 300, left: 45.0, right: 30.0),
-          alignment: Alignment.center,
-          width: 300,
-          height: 100,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(20),
-          ),
+          child: CarouselSlider(
+              options: CarouselOptions(
+                autoPlay: true,
+                aspectRatio: 2.0,
+                viewportFraction: 0.8,
+                enlargeCenterPage: true,
+                enlargeStrategy: CenterPageEnlargeStrategy.height,
+              ),
+              items: imgList
+                  .map((item) => Container(
+                        child: Container(
+                          margin: EdgeInsets.all(5.0),
+                          child: ClipRRect(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(5.0)),
+                              child: Stack(
+                                children: <Widget>[
+                                  Image.network(item,
+                                      fit: BoxFit.cover, width: 1000.0),
+                                  Positioned(
+                                    bottom: 0.0,
+                                    left: 0.0,
+                                    right: 0.0,
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        gradient: LinearGradient(
+                                          colors: [
+                                            Color.fromARGB(200, 0, 0, 0),
+                                            Color.fromARGB(0, 0, 0, 0)
+                                          ],
+                                          begin: Alignment.bottomCenter,
+                                          end: Alignment.topCenter,
+                                        ),
+                                      ),
+                                      padding: EdgeInsets.symmetric(
+                                          vertical: 10.0, horizontal: 20.0),
+                                      child: Text(
+                                        '',
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20.0,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              )),
+                        ),
+                      ))
+                  .toList()),
         )
       ]),
       drawer: Drawer(

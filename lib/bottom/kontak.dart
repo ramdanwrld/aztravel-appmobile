@@ -11,48 +11,75 @@ class kontak extends StatefulWidget {
 class _kontakState extends State<kontak> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color.fromARGB(255, 44, 4, 131),
-      appBar: AppBar(
-        title: const Text('Kontak Travel'),
-        centerTitle: true,
-        backgroundColor: Color.fromARGB(255, 41, 16, 95),
-      ),
-      body: new Center(
-        child: new Text(
-          'Halaman Kontak Travel',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 25,
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Color.fromARGB(255, 44, 4, 131),
+        appBar: AppBar(
+          title: const Text('Profil Akun'),
+          centerTitle: true,
+          backgroundColor: Color.fromARGB(255, 41, 16, 95),
+        ),
+        body: SafeArea(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image(image: AssetImage('assets/images/aztravel2.png')),
+              Text(
+                '       Ada Pertanyaan? \n Silahkan Hubungi Kami',
+                style: TextStyle(
+                  fontSize: 25.0,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(
+                height: 20.0,
+                width: 150.0,
+              ),
+              Card(
+                  color: Colors.green,
+                  margin:
+                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                  child: ListTile(
+                      leading: Icon(
+                        Icons.call,
+                        color: Color.fromARGB(255, 44, 4, 131),
+                      ),
+                      title: Text(
+                        '0265-1234-56789',
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 44, 4, 131),
+                            fontSize: 20.0),
+                      ))),
+            ],
           ),
         ),
-      ),
-      drawer: Drawer(
-          child: ListView(children: <Widget>[
-        UserAccountsDrawerHeader(
-            decoration: BoxDecoration(
-              color: Color.fromARGB(255, 41, 16, 95),
+        drawer: Drawer(
+            child: ListView(children: <Widget>[
+          UserAccountsDrawerHeader(
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 41, 16, 95),
+              ),
+              accountName: Text("User"),
+              accountEmail: Text("user@gmail.com"),
+              currentAccountPicture: GestureDetector(
+                  onTap: () {},
+                  child: CircleAvatar(
+                      backgroundImage: AssetImage("assets/images/user.png")))),
+          ListTile(
+            leading: Icon(Icons.logout),
+            title: Text(
+              "Logout",
+              style: TextStyle(color: Colors.black),
             ),
-            accountName: Text("User"),
-            accountEmail: Text("user@gmail.com"),
-            currentAccountPicture: GestureDetector(
-                onTap: () {},
-                child: CircleAvatar(
-                    backgroundImage: AssetImage("assets/images/user.png")))),
-        ListTile(
-          leading: Icon(Icons.logout),
-          title: Text(
-            "Logout",
-            style: TextStyle(color: Colors.black),
+            onTap: () {
+              // Update the state of the app
+              // ...
+              // Then close the drawer
+              Navigator.pop(context);
+            },
           ),
-          onTap: () {
-            // Update the state of the app
-            // ...
-            // Then close the drawer
-            Navigator.pop(context);
-          },
-        ),
-      ])),
+        ])),
+      ),
     );
   }
 }
