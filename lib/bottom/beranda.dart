@@ -1,6 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pemesanan/alam.dart';
+import 'package:flutter_application_1/pemesanan/event.dart';
+import 'package:flutter_application_1/pemesanan/kuliner.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 
 class beranda extends StatefulWidget {
@@ -66,7 +69,12 @@ class _berandaState extends State<beranda> {
               child: Material(
                 child: InkWell(
                   splashColor: Color.fromRGBO(100, 39, 228, 1),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return alampage();
+                    }));
+                  },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
@@ -82,7 +90,12 @@ class _berandaState extends State<beranda> {
               child: Material(
                 child: InkWell(
                   splashColor: Color.fromRGBO(100, 39, 228, 1),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return kulinerpage();
+                    }));
+                  },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
@@ -98,7 +111,12 @@ class _berandaState extends State<beranda> {
               child: Material(
                 child: InkWell(
                   splashColor: Color.fromRGBO(100, 39, 228, 1),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return eventpage();
+                    }));
+                  },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
