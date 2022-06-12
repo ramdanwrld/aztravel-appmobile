@@ -1,10 +1,15 @@
+import 'dart:html';
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_application_1/pemesanan/alam.dart';
 import 'package:flutter_application_1/pemesanan/event.dart';
 import 'package:flutter_application_1/pemesanan/kuliner.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
+import 'package:flutter_application_1/bottom/pesanan.dart';
+import 'package:flutter_application_1/bottom/kontak.dart';
 
 class beranda extends StatefulWidget {
   const beranda({Key? key}) : super(key: key);
@@ -38,28 +43,45 @@ class _berandaState extends State<beranda> {
       ),
       body: Stack(children: [
         Container(
-          height: 170,
+          height: 240,
           width: double.infinity,
           child: Row(
             children: [
               Container(
-                width: 11,
+                width: 20,
                 height: 150,
               ),
               Container(
                   child: Container(
                       child: Image(
-                          image: AssetImage('assets/images/aztravel.png')))),
+                          image: AssetImage('assets/images/aztravel2.png')))),
             ],
           ),
         ),
         Container(
-          margin: const EdgeInsets.only(top: 160, left: 45.0, right: 30.0),
+            margin: const EdgeInsets.only(top: 190, left: 80.0, right: 30.0),
+            child: RichText(
+              text: TextSpan(
+                style: DefaultTextStyle.of(context).style,
+                children: <TextSpan>[
+                  TextSpan(
+                    text: "   Selamat Datang, azmi !",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
+                  ),
+                ],
+              ),
+            )),
+        Container(
+          margin: const EdgeInsets.only(top: 230, left: 60.0, right: 45.0),
           alignment: Alignment.center,
           width: 300,
-          height: 70,
+          height: 150,
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: Color.fromARGB(255, 41, 16, 95),
             borderRadius: BorderRadius.circular(20),
           ),
           child:
@@ -67,6 +89,7 @@ class _berandaState extends State<beranda> {
             SizedBox.fromSize(
               size: Size(56, 56),
               child: Material(
+                color: Color(0xFFFFFF),
                 child: InkWell(
                   splashColor: Color.fromRGBO(100, 39, 228, 1),
                   onTap: () {
@@ -78,8 +101,15 @@ class _berandaState extends State<beranda> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Icon(Icons.location_on_outlined, size: 40), // <-- Icon
-                      Text("ALAM"), // <-- Text
+                      Icon(
+                        Icons.location_on_outlined,
+                        size: 40,
+                        color: Colors.white,
+                      ), // <-- Icon
+                      Text(
+                        "ALAM",
+                        style: TextStyle(color: Colors.white),
+                      ), // <-- Text
                     ],
                   ),
                 ),
@@ -88,8 +118,9 @@ class _berandaState extends State<beranda> {
             SizedBox.fromSize(
               size: Size(56, 56),
               child: Material(
+                color: Color(0xFFFFFF),
                 child: InkWell(
-                  splashColor: Color.fromRGBO(100, 39, 228, 1),
+                  splashColor: Color.fromARGB(255, 41, 16, 95),
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
@@ -99,8 +130,15 @@ class _berandaState extends State<beranda> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Icon(Icons.fastfood_sharp, size: 40), // <-- Icon
-                      Text("KULINER"), // <-- Text
+                      Icon(
+                        Icons.fastfood_sharp,
+                        size: 40,
+                        color: Colors.white,
+                      ), // <-- Icon
+                      Text(
+                        "KULINER",
+                        style: TextStyle(color: Colors.white),
+                      ), // <-- Text
                     ],
                   ),
                 ),
@@ -109,6 +147,7 @@ class _berandaState extends State<beranda> {
             SizedBox.fromSize(
               size: Size(56, 56),
               child: Material(
+                color: Color(0xFFFFFF),
                 child: InkWell(
                   splashColor: Color.fromRGBO(100, 39, 228, 1),
                   onTap: () {
@@ -120,8 +159,15 @@ class _berandaState extends State<beranda> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Icon(Icons.event, size: 40), // <-- Icon
-                      Text("EVENT"), // <-- Text
+                      Icon(
+                        Icons.event,
+                        size: 40,
+                        color: Colors.white,
+                      ), // <-- Icon
+                      Text(
+                        "EVENT",
+                        style: TextStyle(color: Colors.white),
+                      ), // <-- Text
                     ],
                   ),
                 ),
@@ -130,71 +176,17 @@ class _berandaState extends State<beranda> {
           ]),
         ),
         Container(
-          margin: const EdgeInsets.only(top: 240, left: 45.0, right: 30.0),
-          alignment: Alignment.center,
-          width: 300,
-          height: 70,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(20),
-          ),
-          child:
-              Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-            SizedBox.fromSize(
-              size: Size(56, 56),
-              child: Material(
-                child: InkWell(
-                  splashColor: Color.fromRGBO(100, 39, 228, 1),
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) {
-                      return eventpage();
-                    }));
-                  },
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Icon(Icons.shopping_bag, size: 40), // <-- Icon
-                      Text("Pesanan"), // <-- Text
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            SizedBox.fromSize(
-              size: Size(56, 56),
-              child: Material(
-                child: InkWell(
-                  splashColor: Color.fromRGBO(100, 39, 228, 1),
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) {
-                      return eventpage();
-                    }));
-                  },
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Icon(Icons.call, size: 40), // <-- Icon
-                      Text("Hubungi"), // <-- Text
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ]),
-        ),
-        Container(
-            margin: const EdgeInsets.only(top: 330, left: 45.0, right: 30.0),
+            margin: const EdgeInsets.only(top: 400, left: 60.0, right: 30.0),
             child: RichText(
               text: TextSpan(
                 style: DefaultTextStyle.of(context).style,
                 children: <TextSpan>[
                   TextSpan(
-                    text: "           Galeri Foto Lombok \n",
+                    text: "   Foto Obyek Wisata \n",
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
                     ),
                   ),
                 ],
@@ -202,7 +194,7 @@ class _berandaState extends State<beranda> {
             )),
         Container(
           margin: const EdgeInsets.only(
-            top: 360,
+            top: 440,
           ),
           child: CarouselSlider(
               options: CarouselOptions(

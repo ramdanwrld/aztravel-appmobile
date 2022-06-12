@@ -13,75 +13,75 @@ class alampage extends StatefulWidget {
 class _alampageState extends State<alampage> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Scaffold(
-      backgroundColor: Color.fromRGBO(44, 4, 131, 1),
+    return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return BottomNavi();
-            }));
-          }, // Handle your on tap here.
-          icon: Icon(Icons.arrow_back_ios),
+        title: Center(
+          child: Text("Latihan Grid View"),
         ),
-        title: const Text('Pemesanan Paket Alam'),
-        centerTitle: true,
-        backgroundColor: Color.fromARGB(255, 41, 16, 95),
       ),
-      body: Column(
+      body: GridView.count(
+        //widget yang akan ditampilkan dalam 1 baris adalah 2
+        crossAxisCount: 2,
         children: [
-          Container(
-            child: Text(
-              '\n      Paket Alam 1\n\n      Pantai Sengigi    Gunung Rinjani\n\n      Bukit Merese      Pantai Ampenan\n\n\n     Lokasi : Lombok     Harga : Rp. 422.000 rupiah',
-              style: TextStyle(
-                fontSize: 15,
-              ),
-            ),
-            margin: const EdgeInsets.all(16),
-            height: 200,
-            width: 400,
-            decoration: const BoxDecoration(
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(12),
-                topRight: Radius.circular(12),
-                bottomRight: Radius.circular(12),
-                bottomLeft: Radius.circular(12),
-              ),
-              color: Colors.white,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey,
-                ),
-              ],
-            ),
-          ),
-          Container(
-            child: Text(
-              '\n      Paket Alam 2\n\n      Pantai Pandanan    Desa Sade\n\n      Pantai Nipah          Tiu Kelep\n\n\n     Lokasi : Lombok     Harga : Rp. 350.000 rupiah',
-              style: TextStyle(
-                fontSize: 15,
-              ),
-            ),
-            margin: const EdgeInsets.all(16),
-            height: 200,
-            decoration: const BoxDecoration(
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(12),
-                topRight: Radius.circular(12),
-                bottomRight: Radius.circular(12),
-                bottomLeft: Radius.circular(12),
-              ),
-              color: Colors.white,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey,
-                ),
-              ],
-            ),
-          ),
+          //card ditampilkan disini
+          //saya membuat custom card di bawah agar kodingan tidak terlalu panjang
+          CustomCard(
+              title: "Judul Card Kedua",
+              image:
+                  "https://cdn.pixabay.com/photo/2018/02/01/14/09/yellow-3123271_960_720.jpg"),
+          CustomCard(
+              title: "Judul Card Ketiga",
+              image:
+                  "https://cdn.pixabay.com/photo/2016/08/27/14/38/mountains-1624284__340.jpg"),
+          CustomCard(
+              title: "Judul Card Keempat",
+              image:
+                  "https://cdn.pixabay.com/photo/2016/11/29/02/23/cliffs-1866832__340.jpg"),
+          CustomCard(
+              title: "Judul Card Kelima",
+              image:
+                  "https://cdn.pixabay.com/photo/2016/09/18/23/23/sugarloaf-mountain-1679285__340.jpg"),
         ],
       ),
-    ));
+    );
+  }
+}
+
+//membuat customcard yang bisa kita panggil setiap kali dibutuhkan
+class CustomCard extends StatelessWidget {
+  //ini adalah konstruktor, saat class dipanggil parameter konstruktor wajib diisi
+  //parameter ini akan mengisi title dan gambar pada setiap card
+  CustomCard({required this.title, required this.image});
+
+  String title;
+  String image;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 10),
+      child: Card(
+        //menambahkan bayangan
+        elevation: 5,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              height: 100,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: NetworkImage(
+                        image,
+                      ),
+                      fit: BoxFit.cover)),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Text(title),
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
