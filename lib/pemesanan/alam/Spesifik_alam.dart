@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class SpesifikMobil extends StatelessWidget {
+class SpesifikAlam extends StatelessWidget {
   final double price;
   final String name;
   final String name2;
 
-  SpesifikMobil({this.price, this.name, this.name2});
+  SpesifikAlam({this.price, this.name, this.name2});
 
   @override
   Widget build(BuildContext context) {
@@ -18,43 +18,49 @@ class SpesifikMobil extends StatelessWidget {
           borderRadius: BorderRadius.circular(10)),
       child: price == null
           ? Column(
-        children: [
-          Text(
-            name,
-            style: TextStyle(fontSize: 15,
-            ),
-          ),
-          SizedBox(
-            height: 5,
-          ),
-          Text(
-            name2,
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20,
-            ),
-          ),
-        ],
-      )
+              children: [
+                Text(
+                  name,
+                  style: TextStyle(
+                    fontSize: 15,
+                  ),
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                Text(
+                  name2,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
+                ),
+              ],
+            )
           : Column(
-        children: [
-          Text(
-            name,
-            style: TextStyle(fontSize: 15,
+              children: [
+                Text(
+                  name,
+                  style: TextStyle(
+                    fontSize: 15,
+                  ),
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                Text(
+                  price.toString(),
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                Text(name2)
+              ],
             ),
-          ),
-          SizedBox(
-            height: 5,
-          ),
-          Text(
-            price.toString(),
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20,
-            ),
-          ),
-          SizedBox(
-            height: 5,
-          ),
-          Text(name2)
-        ],
-      ),
     );
   }
 }

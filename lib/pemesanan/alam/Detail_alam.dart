@@ -32,7 +32,7 @@ void _showSimpleDialog(context) {
   );
 }
 
-class alamLengkap extends StatelessWidget {
+class DetailAlam extends StatelessWidget {
   final String title;
   final double price;
   final String color;
@@ -41,7 +41,7 @@ class alamLengkap extends StatelessWidget {
   final String brand;
   final String path;
 
-  alamLengkap(
+  DetailAlam(
       {this.title,
       this.price,
       this.color,

@@ -10,16 +10,32 @@ class paketAlam {
   final String brand;
 
   paketAlam(
-      {@required this.title,
-      @required this.price,
-      @required this.path,
-      @required this.color,
-      @required this.gearbox,
-      @required this.fuel,
-      @required this.brand});
+      {required this.title,
+      required this.price,
+      required this.path,
+      required this.color,
+      required this.gearbox,
+      required this.fuel,
+      required this.brand});
 }
 
 alamList semua_alam = alamList(alam: [
+  paketAlam(
+      title: 'Honda Civic 2018',
+      price: 123,
+      color: 'Grey',
+      gearbox: '4',
+      fuel: '4L',
+      brand: 'Honda',
+      path: 'assets/images/slider/beleq.jpg'),
+  paketAlam(
+      title: 'Honda Civic 2018',
+      price: 123,
+      color: 'Grey',
+      gearbox: '4',
+      fuel: '4L',
+      brand: 'Honda',
+      path: 'assets/images/slider/beleq.jpg'),
   paketAlam(
       title: 'Honda Civic 2018',
       price: 123,
