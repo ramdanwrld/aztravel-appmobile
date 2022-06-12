@@ -10,6 +10,7 @@ import 'package:flutter_application_1/pemesanan/kuliner.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:flutter_application_1/bottom/pesanan.dart';
 import 'package:flutter_application_1/bottom/kontak.dart';
+import 'package:flutter_application_1/pemesanan/alam/tampilan_alam.dart';
 
 class beranda extends StatefulWidget {
   const beranda({Key? key}) : super(key: key);
@@ -95,7 +96,7 @@ class _berandaState extends State<beranda> {
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                      return alampage();
+                      return tampilan_alam();
                     }));
                   },
                   child: Column(
