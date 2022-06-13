@@ -42,13 +42,13 @@ class DetailAlam extends StatelessWidget {
   final String path;
 
   DetailAlam(
-      {this.title,
-      this.price,
-      this.color,
-      this.gearbox,
-      this.fuel,
-      this.brand,
-      this.path});
+      {required this.title,
+      required this.price,
+      required this.color,
+      required this.gearbox,
+      required this.fuel,
+      required this.brand,
+      required this.path});
 
   @override
   Widget build(BuildContext context) {
@@ -103,20 +103,6 @@ class DetailAlam extends StatelessWidget {
           SizedBox(height: 20),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              SpesifikAlam(
-                name: 'Color',
-                name2: color,
-              ),
-              SpesifikAlam(
-                name: 'Gearbox',
-                name2: gearbox,
-              ),
-              SpesifikAlam(
-                name: 'Fuel',
-                name2: fuel,
-              )
-            ],
           ),
           SizedBox(height: 10),
           RaisedButton(

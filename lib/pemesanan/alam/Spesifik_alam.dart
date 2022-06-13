@@ -5,7 +5,7 @@ class SpesifikAlam extends StatelessWidget {
   final String name;
   final String name2;
 
-  SpesifikAlam({this.price, this.name, this.name2});
+  SpesifikAlam({required this.price, required this.name, required this.name2});
 
   @override
   Widget build(BuildContext context) {

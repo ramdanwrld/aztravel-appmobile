@@ -49,5 +49,5 @@ alamList semua_alam = alamList(alam: [
 class alamList {
   List<paketAlam> alam;
 
-  alamList({this.alam});
+  alamList({required this.alam});
 }
