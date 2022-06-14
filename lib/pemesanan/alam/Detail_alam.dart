@@ -121,7 +121,6 @@ class DetailAlam extends StatelessWidget {
             ),
           ),
           SizedBox(height: 20),
-          SizedBox(height: 40),
           RaisedButton(
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
