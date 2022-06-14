@@ -27,7 +27,7 @@ alamList semua_alam = alamList(alam: [
       gearbox: '4',
       fuel: '4L',
       brand: 'Honda',
-      path: 'assets/images/slider/beleq.jpg'),
+      path: 'assets/images/snorkeling.jpg'),
   paketAlam(
       title: 'Honda Civic 2018',
       price: 123,
@@ -35,7 +35,7 @@ alamList semua_alam = alamList(alam: [
       gearbox: '4',
       fuel: '4L',
       brand: 'Honda',
-      path: 'assets/images/slider/beleq.jpg'),
+      path: 'assets/images/snorkeling.jpg'),
   paketAlam(
       title: 'Honda Civic 2018',
       price: 123,
@@ -43,11 +43,11 @@ alamList semua_alam = alamList(alam: [
       gearbox: '4',
       fuel: '4L',
       brand: 'Honda',
-      path: 'assets/images/slider/beleq.jpg'),
+      path: 'assets/images/snorkeling.jpg'),
 ]);
 
 class alamList {
   List<paketAlam> alam;
 
-  alamList({this.alam});
+  alamList({required this.alam});
 }

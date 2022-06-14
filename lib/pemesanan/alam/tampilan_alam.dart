@@ -7,7 +7,7 @@ class tampilan_alam extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
+        backgroundColor: Color.fromARGB(255, 41, 16, 95),
         title: Text("GoTrav"),
         centerTitle: true,
       ),
@@ -17,7 +17,8 @@ class tampilan_alam extends StatelessWidget {
             padding: const EdgeInsets.all(15.0),
           ),
           Text(
-            'Available Cars',
+            'Paket Alam Yang Tersedia',
+            textAlign: TextAlign.center,
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 25,

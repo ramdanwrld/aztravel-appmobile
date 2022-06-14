@@ -42,20 +42,21 @@ class DetailAlam extends StatelessWidget {
   final String path;
 
   DetailAlam(
-      {this.title,
-      this.price,
-      this.color,
-      this.gearbox,
-      this.fuel,
-      this.brand,
-      this.path});
+      {required this.title,
+      required this.price,
+      required this.color,
+      required this.gearbox,
+      required this.fuel,
+      required this.brand,
+      required this.path});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 172, 83, 83),
-        title: Text("GoTrav"),
+        backgroundColor: Color.fromARGB(255, 41, 16, 95),
+        title: Text("Paket Alam 1"),
         centerTitle: true,
       ),
       body: Column(
@@ -74,51 +75,53 @@ class DetailAlam extends StatelessWidget {
             ),
           ),
           Hero(tag: title, child: Image.asset(path)),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              SpesifikAlam(
-                name: '12 Month',
-                price: price * 12,
-                name2: 'Dollars',
-              ),
-              SpesifikAlam(
-                name: '6 Month',
-                price: price * 6,
-                name2: 'Dollars',
-              ),
-              SpesifikAlam(
-                name: '1 Month',
-                price: price * 1,
-                name2: 'Dollars',
-              )
-            ],
-          ),
-          SizedBox(height: 20),
           Text(
-            'SPECIFICATIONS',
+            'Deskripsi Paket',
             style: TextStyle(
-                color: Colors.grey, fontWeight: FontWeight.bold, fontSize: 20),
+                color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20),
+          ),
+          Container(
+            margin: const EdgeInsets.all(10),
+            height: 100,
+            decoration: const BoxDecoration(
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(12),
+                topRight: Radius.circular(12),
+                bottomRight: Radius.circular(12),
+                bottomLeft: Radius.circular(12),
+              ),
+              color: Colors.grey,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey,
+                  blurRadius: 0,
+                  spreadRadius: 0,
+                ),
+              ],
+            ),
+          ),
+          Container(
+            margin: const EdgeInsets.all(10),
+            height: 100,
+            decoration: const BoxDecoration(
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(12),
+                topRight: Radius.circular(12),
+                bottomRight: Radius.circular(12),
+                bottomLeft: Radius.circular(12),
+              ),
+              color: Colors.grey,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey,
+                  blurRadius: 0,
+                  spreadRadius: 0,
+                ),
+              ],
+            ),
           ),
           SizedBox(height: 20),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              SpesifikAlam(
-                name: 'Color',
-                name2: color,
-              ),
-              SpesifikAlam(
-                name: 'Gearbox',
-                name2: gearbox,
-              ),
-              SpesifikAlam(
-                name: 'Fuel',
-                name2: fuel,
-              )
-            ],
-          ),
-          SizedBox(height: 10),
+          SizedBox(height: 40),
           RaisedButton(
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
@@ -128,7 +131,7 @@ class DetailAlam extends StatelessWidget {
             padding: EdgeInsets.all(10.0),
             color: Colors.blueAccent,
             child: Text(
-              'Rental',
+              'Pesan Paket',
               style: TextStyle(fontSize: 20, color: Colors.white),
             ),
           )
