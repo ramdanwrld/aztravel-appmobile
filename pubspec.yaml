@@ -41,6 +41,7 @@ dependencies:
   flutter_svg: ^1.0.3
   flutter_image_slideshow: any
   carousel_slider: ^4.1.1
+  flutter_tags: "^0.4.9+1"
   
 
 dev_dependencies:

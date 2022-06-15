@@ -2,13 +2,12 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_application_1/pemesanan/alam.dart';
 import 'package:flutter_application_1/pemesanan/event.dart';
 import 'package:flutter_application_1/pemesanan/kuliner.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:flutter_application_1/bottom/pesanan.dart';
 import 'package:flutter_application_1/bottom/kontak.dart';
-import 'package:flutter_application_1/pemesanan/alam/tampilan_alam.dart';
+import 'package:flutter_application_1/pemesanan/alam.dart';
 
 class beranda extends StatefulWidget {
   const beranda({Key? key}) : super(key: key);
@@ -34,6 +33,7 @@ class _berandaState extends State<beranda> {
   ];
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Color.fromARGB(255, 44, 4, 131),
       appBar: AppBar(
         title: const Text('Beranda'),
@@ -53,7 +53,7 @@ class _berandaState extends State<beranda> {
               Container(
                   child: Container(
                       child: Image(
-                          image: AssetImage('assets/images/aztravel2.png')))),
+                          image: AssetImage('assets/images/aztravel6.png')))),
             ],
           ),
         ),
@@ -94,7 +94,7 @@ class _berandaState extends State<beranda> {
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                      return tampilan_alam();
+                      return MyApp();
                     }));
                   },
                   child: Column(
@@ -121,10 +121,10 @@ class _berandaState extends State<beranda> {
                 child: InkWell(
                   splashColor: Color.fromARGB(255, 41, 16, 95),
                   onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) {
-                      return kulinerpage();
-                    }));
+                    // Navigator.push(context,
+                    //     MaterialPageRoute(builder: (context) {
+                    //   // return paketkuliner();
+                    // }));
                   },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -150,10 +150,10 @@ class _berandaState extends State<beranda> {
                 child: InkWell(
                   splashColor: Color.fromRGBO(100, 39, 228, 1),
                   onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) {
-                      return eventpage();
-                    }));
+                    // Navigator.push(context,
+                    //     MaterialPageRoute(builder: (context) {
+                    //   // return paketevent();
+                    // }));
                   },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
