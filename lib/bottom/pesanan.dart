@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../login_register/utama.dart';
+
 class pesanan extends StatefulWidget {
   const pesanan({Key? key}) : super(key: key);
 
@@ -100,10 +102,8 @@ class _pesananState extends State<pesanan> {
               style: TextStyle(color: Colors.black),
             ),
             onTap: () {
-              // Update the state of the app
-              // ...
-              // Then close the drawer
-              Navigator.pop(context);
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => utama()));
             },
           ),
         ])));

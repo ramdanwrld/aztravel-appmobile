@@ -9,6 +9,8 @@ import 'package:flutter_application_1/bottom/pesanan.dart';
 import 'package:flutter_application_1/bottom/kontak.dart';
 import 'package:flutter_application_1/pemesanan/alam.dart';
 
+import '../login_register/utama.dart';
+
 class beranda extends StatefulWidget {
   const beranda({Key? key}) : super(key: key);
 
@@ -18,18 +20,19 @@ class beranda extends StatefulWidget {
 
 class _berandaState extends State<beranda> {
   final List<String> imgList = [
-    'https://nicetourbali.com/wp-content/uploads/2019/07/Gili-Trawangan-Snorkeling-Day-Trip.jpg',
-    'https://cf.bstatic.com/xdata/images/hotel/max1024x768/328280587.jpg?k=7eabf88f02b9406cba4a86bac288567ac122bcce8c3ab2dcc6580d481c5027e3&o=&hp=1',
-    'https://disk.mediaindonesia.com/thumbs/1800x1200/news/2022/01/54f732d698290a1030dec53fb8e08b83.jpg',
-    'https://cdn-cas.orami.co.id/parenting/images/shutterstock_1681180648.width-800.jpg',
-    'https://pelopor.id/wp-content/uploads/2021/12/Gendang-Beleq.jpg',
-    'https://cdn-2.tstatic.net/travel/foto/bank/images/nasi-puyung-lombok.jpg',
-    'https://travelspromo.com/wp-content/uploads/2020/04/The-mandalika-kuta-lombok.jpg',
-    'http://www.trekkingrinjani.com/images/rinjani.jpg',
-    'https://1.bp.blogspot.com/-IMCxGqe8xCY/Wvw991azHoI/AAAAAAAAAjM/Hc2RjWh0tmY4Kln-1Tm8iX0wVy6ltowjQCLcBGAs/s1600/ajprioko___5AFbAFi4av___%255B1%255D.jpg',
-    'https://cdn.statically.io/img/liburmulu.com/f=auto%2Cq=60/wp-content/uploads/2016/01/Ini-Indonesia-teman-Kalian-harus-bisa-menjaganya-dengan-baik-bukan-merusaknya-Setuju.jpg',
-    'https://assets.promediateknologi.com/crop/0x0:0x0/x/photo/2022/03/01/2785067363.jpg',
-    'https://www.indonesiatravel.news/wp-content/uploads/2021/09/IMG-20210918-WA0042.jpg',
+    'assets/images/objek/ayamtaliwang.jpg',
+    'assets/images/objek/baunyele.jpg',
+    'assets/images/objek/beleq.jpg',
+    'assets/images/objek/bukitpergasingan.jpg',
+    'assets/images/objek/gendang.jpg',
+    'assets/images/objek/nasipuyung.jpg',
+    'assets/images/objek/pantaikutamandalika.jpg',
+    'assets/images/objek/pelecing.jpg',
+    'assets/images/objek/presean.jpg',
+    'assets/images/objek/rinjani.jpg',
+    'assets/images/objek/satetanjung.jpg',
+    'assets/images/objek/snorkeling.jpg',
+    'assets/images/objek/terjunbenangkelambu.jpg',
   ];
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,7 +67,7 @@ class _berandaState extends State<beranda> {
                 style: DefaultTextStyle.of(context).style,
                 children: <TextSpan>[
                   TextSpan(
-                    text: "   Selamat Datang, azmi !",
+                    text: "   Selamat Datang, User !",
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -267,10 +270,8 @@ class _berandaState extends State<beranda> {
             style: TextStyle(color: Colors.black),
           ),
           onTap: () {
-            // Update the state of the app
-            // ...
-            // Then close the drawer
-            Navigator.pop(context);
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => utama()));
           },
         ),
       ])),

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/login_register/utama.dart';
 
 class akun extends StatefulWidget {
   const akun({Key? key}) : super(key: key);
@@ -82,14 +83,19 @@ class _akunState extends State<akun> {
                   margin:
                       EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
                   child: ListTile(
-                      leading: Icon(
-                        Icons.logout,
-                        color: Colors.white,
-                      ),
-                      title: Text(
-                        'Log Out',
-                        style: TextStyle(color: Colors.white, fontSize: 20.0),
-                      ))),
+                    leading: Icon(
+                      Icons.logout,
+                      color: Colors.white,
+                    ),
+                    title: Text(
+                      'Log Out',
+                      style: TextStyle(color: Colors.white, fontSize: 20.0),
+                    ),
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => utama()));
+                    },
+                  )),
             ],
           ),
         ),
@@ -112,10 +118,8 @@ class _akunState extends State<akun> {
               style: TextStyle(color: Colors.black),
             ),
             onTap: () {
-              // Update the state of the app
-              // ...
-              // Then close the drawer
-              Navigator.pop(context);
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => utama()));
             },
           ),
         ])),

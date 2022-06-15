@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../login_register/utama.dart';
+
 class kontak extends StatefulWidget {
   const kontak({Key? key}) : super(key: key);
 
@@ -72,10 +74,8 @@ class _kontakState extends State<kontak> {
               style: TextStyle(color: Colors.black),
             ),
             onTap: () {
-              // Update the state of the app
-              // ...
-              // Then close the drawer
-              Navigator.pop(context);
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => utama()));
             },
           ),
         ])),

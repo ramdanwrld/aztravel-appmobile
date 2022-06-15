@@ -42,6 +42,8 @@ dependencies:
   flutter_image_slideshow: any
   carousel_slider: ^4.1.1
   flutter_tags: "^0.4.9+1"
+  dropdown_button2: ^1.6.2
+
   
 
 dev_dependencies:
