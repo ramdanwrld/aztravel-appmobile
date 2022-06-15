@@ -39,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
     responseList.forEach((post) {
       listItems.add(Container(
           height: 260,
-          margin: const EdgeInsets.only(top: 10, left: 60.0, right: 45.0),
+          margin: const EdgeInsets.only(top: 10, left: 40.0, right: 40.0),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(20.0)),
               color: Colors.white,
@@ -47,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 BoxShadow(color: Colors.black.withAlpha(100), blurRadius: 10.0),
               ]),
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 30),
+            padding: const EdgeInsets.symmetric(horizontal: 50.0, vertical: 30),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[

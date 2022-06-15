@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_application_1/pemesanan/alam.dart';
-
 import '../bottom/bottom_navi.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
+import 'package:intl/intl.dart';
 
 class checkout extends StatefulWidget {
   const checkout({Key? key}) : super(key: key);
@@ -14,10 +14,17 @@ class checkout extends StatefulWidget {
 }
 
 class _checkoutState extends State<checkout> {
+  String? selectedValue;
   final List<String> items = [
     'Transfer',
   ];
-  String? selectedValue;
+  TextEditingController dateinput = TextEditingController();
+  @override
+  void initState() {
+    dateinput.text = '';
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -153,22 +160,40 @@ class _checkoutState extends State<checkout> {
                     SizedBox(
                       height: 10,
                     ),
-                    TextFormField(
+                    TextField(
+                      controller:
+                          dateinput, //editing controller of this TextField
                       decoration: InputDecoration(
-                        hintText: "Nama Lengkap",
-                        hintStyle: const TextStyle(color: Colors.grey),
-                        labelText: "Nama Lengkap",
-                        labelStyle: const TextStyle(color: Colors.grey),
-                        border: OutlineInputBorder(
-                            borderRadius: new BorderRadius.circular(0.0)),
-                        fillColor: Colors.black,
-                        focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(0.0),
-                          borderSide: const BorderSide(
-                            color: Colors.black,
+                          icon: Icon(Icons.calendar_today), //icon of text field
+                          labelText: "Masukkan Tanggal" //label text of field
                           ),
-                        ),
-                      ),
+                      readOnly:
+                          true, //set it true, so that user will not able to edit text
+                      onTap: () async {
+                        DateTime? pickedDate = await showDatePicker(
+                            context: context,
+                            initialDate: DateTime.now(),
+                            firstDate: DateTime(
+                                2000), //DateTime.now() - not to allow to choose before today.
+                            lastDate: DateTime(2101));
+
+                        if (pickedDate != null) {
+                          print(
+                              pickedDate); //pickedDate output format => 2021-03-10 00:00:00.000
+                          String formattedDate =
+                              DateFormat('yyyy-MM-dd').format(pickedDate);
+                          print(
+                              formattedDate); //formatted date output using intl package =>  2021-03-16
+                          //you can implement different kind of Date Format here according to your requirement
+
+                          setState(() {
+                            dateinput.text =
+                                formattedDate; //set output date to TextField value.
+                          });
+                        } else {
+                          print("Date is not selected");
+                        }
+                      },
                     ),
                     SizedBox(
                       height: 10,
@@ -226,12 +251,7 @@ class _checkoutState extends State<checkout> {
                             fontSize: 15,
                             fontWeight: FontWeight.bold),
                       ),
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => checkout()));
-                      },
+                      onPressed: () {},
                     ),
                   ],
                 ),
