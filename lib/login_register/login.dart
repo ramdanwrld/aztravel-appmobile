@@ -14,6 +14,8 @@ class login extends StatefulWidget {
 }
 
 class _loginState extends State<login> {
+  TextEditingController txtEmail = new TextEditingController();
+  TextEditingController txtPassword = new TextEditingController();
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 44, 4, 131),
@@ -26,6 +28,7 @@ class _loginState extends State<login> {
               width: 250,
               color: Colors.white,
               child: TextFormField(
+                controller: txtEmail,
                 decoration: InputDecoration(
                     hintText: "Email", border: InputBorder.none),
               ),
@@ -38,6 +41,8 @@ class _loginState extends State<login> {
               width: 250,
               color: Colors.white,
               child: TextFormField(
+                controller: txtPassword,
+                obscureText: true,
                 decoration: InputDecoration(
                     hintText: "Password", border: InputBorder.none),
               ),
@@ -47,7 +52,7 @@ class _loginState extends State<login> {
             ),
             MaterialButton(
               padding: EdgeInsets.all(20),
-              minWidth: 250,
+              minWidth: 260,
               color: Colors.orange,
               child: Text(
                 "Login",
@@ -57,8 +62,8 @@ class _loginState extends State<login> {
                     fontWeight: FontWeight.bold),
               ),
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => BottomNavi()));
+                // Navigator.push(context,
+                //     MaterialPageRoute(builder: (context) => BottomNavi()));
               },
             ),
             TextButton(
