@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/bottom/beranda.dart';
 import 'package:flutter_application_1/pemesanan/checkout.dart';
 import '../bottom/bottom_navi.dart';
 import 'data.dart';

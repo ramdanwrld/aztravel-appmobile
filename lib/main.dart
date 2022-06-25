@@ -4,11 +4,11 @@ import 'bottom/bottom_navi.dart';
 import 'package:flutter/services.dart';
 
 void main() {
-  runApp(const run());
+  runApp(const MyApp());
 }
 
-class run extends StatelessWidget {
-  const run({Key? key}) : super(key: key);
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
