@@ -17,7 +17,7 @@ class _kontakState extends State<kontak> {
       home: Scaffold(
         backgroundColor: Color.fromARGB(255, 44, 4, 131),
         appBar: AppBar(
-          title: const Text('Profil Akun'),
+          title: const Text('Kontak Travel'),
           centerTitle: true,
           backgroundColor: Color.fromARGB(255, 41, 16, 95),
         ),

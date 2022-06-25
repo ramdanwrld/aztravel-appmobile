@@ -34,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
   DateTime date = DateTime(30, 12, 2022);
 
   void getPostsData() {
-    List<dynamic> responseList = FOOD_DATA;
+    List<dynamic> responseList = data_paket;
     List<Widget> listItems = [];
     responseList.forEach((post) {
       listItems.add(Container(
@@ -55,12 +55,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      post["name"],
+                      post["namapaket"],
                       style: const TextStyle(
                           fontSize: 28, fontWeight: FontWeight.bold),
                     ),
                     Text(
-                      post["brand"],
+                      post["destinasi"],
                       style: const TextStyle(fontSize: 17, color: Colors.grey),
                     ),
                     SizedBox(
@@ -74,7 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         size: 20,
                       )),
                       TextSpan(
-                        text: '\Lokasi : ${post["location"]}',
+                        text: '\Lokasi : ${post["lokasi"]}',
                         style:
                             const TextStyle(fontSize: 17, color: Colors.black),
                       ),
@@ -83,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       height: 10,
                     ),
                     Text(
-                      "\Rp. ${post["price"]}",
+                      "\Rp. ${post["harga"]}",
                       textAlign: TextAlign.right,
                       style: const TextStyle(
                         fontSize: 20,

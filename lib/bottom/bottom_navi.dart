@@ -24,6 +24,7 @@ class _BottomNaviState extends State<BottomNavi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         body: body[currentIndex],
         bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Color.fromRGBO(100, 39, 228, 1),

@@ -2,12 +2,10 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_application_1/pemesanan/event.dart';
-import 'package:flutter_application_1/pemesanan/kuliner.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:flutter_application_1/bottom/pesanan.dart';
 import 'package:flutter_application_1/bottom/kontak.dart';
-import 'package:flutter_application_1/pemesanan/alam.dart';
+import 'package:flutter_application_1/pemesanan/paketwisata.dart';
 
 import '../login_register/utama.dart';
 
@@ -81,7 +79,7 @@ class _berandaState extends State<beranda> {
           margin: const EdgeInsets.only(top: 230, left: 60.0, right: 45.0),
           alignment: Alignment.center,
           width: 300,
-          height: 150,
+          height: 130,
           decoration: BoxDecoration(
             color: Color.fromARGB(255, 41, 16, 95),
             borderRadius: BorderRadius.circular(20),
@@ -105,7 +103,7 @@ class _berandaState extends State<beranda> {
                     children: <Widget>[
                       Icon(
                         Icons.location_on_outlined,
-                        size: 40,
+                        size: 35,
                         color: Colors.white,
                       ), // <-- Icon
                       Text(
@@ -124,17 +122,17 @@ class _berandaState extends State<beranda> {
                 child: InkWell(
                   splashColor: Color.fromARGB(255, 41, 16, 95),
                   onTap: () {
-                    // Navigator.push(context,
-                    //     MaterialPageRoute(builder: (context) {
-                    //   // return paketkuliner();
-                    // }));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return MyApp();
+                    }));
                   },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Icon(
                         Icons.fastfood_sharp,
-                        size: 40,
+                        size: 35,
                         color: Colors.white,
                       ), // <-- Icon
                       Text(
@@ -153,17 +151,17 @@ class _berandaState extends State<beranda> {
                 child: InkWell(
                   splashColor: Color.fromRGBO(100, 39, 228, 1),
                   onTap: () {
-                    // Navigator.push(context,
-                    //     MaterialPageRoute(builder: (context) {
-                    //   // return paketevent();
-                    // }));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return MyApp();
+                    }));
                   },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Icon(
                         Icons.event,
-                        size: 40,
+                        size: 35,
                         color: Colors.white,
                       ), // <-- Icon
                       Text(

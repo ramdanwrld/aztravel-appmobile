@@ -24,24 +24,31 @@ class _utamaState extends State<utama> {
             children: <Widget>[
               Image(image: AssetImage('assets/images/aztravel2.png')),
               SizedBox(
-                height: 60,
-              ),
-              Text("Selamat Datang di Aplikasi AZ TRAVEL",
-                  style: TextStyle(color: Colors.white, fontSize: 22)),
-              SizedBox(
-                height: 10,
-              ),
-              Text(
-                "Solusi Perjalanan Wisata Anda",
-                style: TextStyle(color: Colors.white, fontSize: 18),
+                height: 5,
               ),
               SizedBox(
                 height: 18,
               ),
               MaterialButton(
                 minWidth: 210,
-                color: Colors.white,
-                textColor: Colors.black,
+                color: Colors.orange,
+                textColor: Colors.white,
+                child: Text(
+                  "Login",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                ),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => login()));
+                },
+              ),
+              SizedBox(
+                height: 18,
+              ),
+              MaterialButton(
+                minWidth: 210,
+                color: Colors.orange,
+                textColor: Colors.white,
                 child: Text(
                   "Register",
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
@@ -51,19 +58,6 @@ class _utamaState extends State<utama> {
                       MaterialPageRoute(builder: (context) => SignUp()));
                 },
               ),
-              TextButton(
-                child: Text(
-                  "Log In",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18),
-                ),
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => login()));
-                },
-              )
             ],
           ),
         ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_application_1/pemesanan/alam.dart';
+import 'package:flutter_application_1/pemesanan/paketwisata.dart';
 import '../bottom/bottom_navi.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:intl/intl.dart';
@@ -28,6 +28,7 @@ class _checkoutState extends State<checkout> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Color.fromRGBO(44, 4, 131, 1),
       appBar: AppBar(
         leading: IconButton(
@@ -47,7 +48,7 @@ class _checkoutState extends State<checkout> {
           margin: const EdgeInsets.only(top: 30, left: 30.0, right: 30.0),
           alignment: Alignment.center,
           width: 600,
-          height: 700,
+          height: 630,
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(20),
@@ -64,11 +65,14 @@ class _checkoutState extends State<checkout> {
                       style: const TextStyle(
                           fontSize: 20, fontWeight: FontWeight.bold),
                     ),
+                    SizedBox(
+                      height: 10,
+                    ),
                     TextFormField(
                       decoration: InputDecoration(
-                        hintText: "Paket Alam 1",
+                        hintText: "Paket",
                         hintStyle: const TextStyle(color: Colors.grey),
-                        labelText: "Paket Alam 1",
+                        labelText: "Paket",
                         labelStyle: const TextStyle(color: Colors.grey),
                         border: OutlineInputBorder(
                             borderRadius: new BorderRadius.circular(0.0)),
@@ -211,7 +215,7 @@ class _checkoutState extends State<checkout> {
                         hint: Text(
                           'Transfer',
                           style: TextStyle(
-                            fontSize: 17,
+                            fontSize: 20,
                             color: Theme.of(context).hintColor,
                           ),
                         ),
@@ -241,14 +245,14 @@ class _checkoutState extends State<checkout> {
                       height: 20,
                     ),
                     MaterialButton(
-                      padding: EdgeInsets.all(20),
-                      minWidth: 250,
+                      padding: EdgeInsets.all(10),
+                      minWidth: 350,
                       color: Colors.orange,
                       child: Text(
                         "Pesan Paket",
                         style: TextStyle(
                             color: Colors.white,
-                            fontSize: 15,
+                            fontSize: 20,
                             fontWeight: FontWeight.bold),
                       ),
                       onPressed: () {},

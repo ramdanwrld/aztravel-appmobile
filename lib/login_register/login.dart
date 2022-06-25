@@ -65,8 +65,8 @@ class _loginState extends State<login> {
                     fontWeight: FontWeight.bold),
               ),
               onPressed: () {
-                // Navigator.push(context,
-                //     MaterialPageRoute(builder: (context) => BottomNavi()));
+                //Navigator.push(context,
+                //MaterialPageRoute(builder: (context) => BottomNavi()));
                 this._doLogin();
               },
             ),
@@ -78,6 +78,7 @@ class _loginState extends State<login> {
               onPressed: () {
                 Navigator.push(
                     context, MaterialPageRoute(builder: (context) => SignUp()));
+                //this._doLogin();
               },
             )
           ],
@@ -88,7 +89,10 @@ class _loginState extends State<login> {
 
   Future _doLogin() async {
     if (txtEmail.text.isEmpty || txtPassword.text.isEmpty) {
-      Alert(context: context, title: "Data Tidak Benar", type: AlertType.error)
+      Alert(
+              context: context,
+              title: "Data Belum Diisi!!",
+              type: AlertType.error)
           .show();
       return;
     }
@@ -97,18 +101,40 @@ class _loginState extends State<login> {
     progressDialog.show();
     var url = 'http://127.0.0.1:8000/api/login';
     final response = await http.post(Uri.parse(url), body: {
-      'Email': txtEmail.text,
-      'Password': txtPassword.text,
+      'email': txtEmail.text,
+      'password': txtPassword.text,
     }, headers: {
       'Accept': 'application/json'
     });
     progressDialog.hide();
     if (response.statusCode == 200) {
-      Alert(context: context, title: "Login Berhasil", type: AlertType.success)
-          .show();
+      Alert(
+          context: context,
+          title: "Login Berhasil",
+          type: AlertType.success,
+          buttons: [
+            DialogButton(
+              child: Text("OK"),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => BottomNavi()));
+              },
+            ),
+          ]).show();
     } else {
-      Alert(context: context, title: "Login Gagal", type: AlertType.error)
-          .show();
+      Alert(
+          context: context,
+          title: "Login Gagal",
+          type: AlertType.error,
+          buttons: [
+            DialogButton(
+              child: Text("Coba Lagi"),
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => login()));
+              },
+            ),
+          ]).show();
     }
   }
 }

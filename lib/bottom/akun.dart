@@ -55,20 +55,6 @@ class _akunState extends State<akun> {
                       EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
                   child: ListTile(
                       leading: Icon(
-                        Icons.phone,
-                        color: Color.fromARGB(255, 44, 4, 131),
-                      ),
-                      title: Text(
-                        '081234567854',
-                        style: TextStyle(
-                            color: Color.fromARGB(255, 44, 4, 131),
-                            fontSize: 20.0),
-                      ))),
-              Card(
-                  margin:
-                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                  child: ListTile(
-                      leading: Icon(
                         Icons.email,
                         color: Color.fromARGB(255, 44, 4, 131),
                       ),

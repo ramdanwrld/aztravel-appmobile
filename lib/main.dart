@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/login_register/utama.dart';
-
 import 'bottom/bottom_navi.dart';
 import 'package:flutter/services.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const run());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class run extends StatelessWidget {
+  const run({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
